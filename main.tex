@@ -1,0 +1,71 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+% Figures
+\usepackage{graphicx}
+
+% BibTeX configuration
+\usepackage{biblatex}
+\bibliography{references} 
+\RequirePackage{doi}
+\usepackage{hyperref}
+
+% Additional packages can go here:
+% \usepackage{...}
+
+% Title 
+
+% Please personalize by replacing variables in square brackets: "[...]"
+\title{[Your Topic Title]}
+\author{[Author] \\
+    % leave the following open for submitting drafts, only necessary in the final version 
+    \small Matriculation Number: [Number] \\ 
+    \small Study Program: [Official title of the program] }
+
+\date{ \vspace{0.5cm} \large 
+  Master Seminar Information Visualization \\ 
+  \emph{Visual Sports Analytics} \\ \vspace{0.2cm}
+  University of Bamberg \\ \vspace{0.2cm}
+  Winter Term 2021/2022}
+
+\begin{document}
+
+\maketitle
+
+% Main contents
+
+\section{Introduction}
+\label{sec:introcution}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae leo et leo feugiat varius. Donec eu odio dictum, placerat arcu eget, mollis diam. Nunc nec blandit purus, mollis aliquam purus. Ut quam urna, elementum ut turpis id, tempus vulputate felis. Donec vitae massa ipsum. Vestibulum fermentum condimentum mauris, eu maximus sem hendrerit tempus. Ut sodales placerat neque, non porta dui malesuada sodales.
+
+Praesent efficitur, turpis vel aliquet facilisis, urna lacus maximus quam, in condimentum tellus augue id eros. Mauris interdum pulvinar eros, id elementum augue eleifend eu. Aenean in ullamcorper nisi. Duis in augue dapibus, hendrerit arcu non, eleifend enim. Suspendisse dignissim nibh sed auctor sagittis. Vestibulum pellentesque vestibulum fermentum. Nam hendrerit venenatis ante in feugiat. Fusce a ligula eros. Donec commodo tortor non porta suscipit. Praesent rhoncus, ante accumsan blandit consectetur, augue turpis vehicula augue, at feugiat magna est et mauris. Etiam ac urna efficitur, scelerisque augue vitae, porttitor velit. Nam accumsan quam arcu. Donec ullamcorper et elit non rutrum. Ut lobortis dapibus sapien efficitur auctor. Nulla ipsum lacus, varius eget tincidunt id, laoreet ac nulla. Duis malesuada sollicitudin vulputate.
+
+Morbi mattis leo eu elit convallis molestie. In gravida diam cursus, aliquet ex quis, tempus purus. Phasellus id pretium augue. Duis ut sollicitudin erat, eu bibendum nunc. Vestibulum lobortis venenatis nunc ac sagittis. Sed consequat pharetra ante a convallis. Aliquam finibus nisl ex.
+
+Nullam consectetur, urna vel lacinia mattis, justo ipsum interdum mauris, tincidunt ultrices lorem arcu ac urna. Donec volutpat neque ut blandit dictum. Quisque rhoncus lectus vel ligula venenatis lobortis. Sed quis elit ut felis consectetur luctus. Etiam hendrerit pharetra eleifend. Proin blandit congue tortor, eget consequat neque sodales a. Fusce vel sapien id massa fringilla maximus et ac sapien. Phasellus a tellus aliquet, tempor lectus a, ultrices tortor.
+
+Donec in dictum nisl. In eget sollicitudin magna. Aenean ut felis rutrum, elementum mi at, semper mauris. Mauris pharetra ultrices nulla, quis commodo enim tincidunt sed. Mauris quis elit suscipit, maximus erat quis, sodales augue. Quisque vitae suscipit mauris. Suspendisse tempus quis magna at dapibus. Maecenas nec odio quis massa convallis aliquam at vitae nisl. Fusce magna neque, vulputate ut nulla eget, commodo suscipit nibh. Nullam fringilla, elit vitae egestas suscipit, ligula dolor egestas lorem, et ullamcorper augue purus sed neque. 
+
+\section{Sample Section}
+
+This is just a sample section to demonstrate references to a paper~\cite{Shneiderman1996Eyes} and a website~\cite{wiki:BibTeX}.
+
+\begin{figure}[tbp]
+  \centering
+  \includegraphics[width=0.3\linewidth]{figures/uni_ba_logo.png}
+  \caption{Logo of the University of Bamberg.}
+  \label{fig:uni_ba_logo}
+\end{figure}
+
+Also, you can use internal references, for instance, to Section~\ref{sec:introcution} and Figure~\ref{fig:uni_ba_logo}.
+
+% References
+
+% Please clean your references! 
+% See https://sites.umiacs.umd.edu/elm/2018/12/13/the-art-of-clean-references/
+
+\printbibliography
+
+\end{document}
