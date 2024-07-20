@@ -5,4 +5,12 @@ One key question of course is which kinds of data is available and from which so
 
 In general, there are two kinds of data: direct data and derived data. Direct data is data that can be collected directly and usually is already available, such as the grades of a student, specifications of degree programs, results of mid-term evaluations or the interaction of a given student with published course material.
 
-Derived data is data that can be generated from direct data, such as estimated difficulty of exams, pass rates, estimated trajectory of a student (if and when they will finish their degree), or the estimated workload of a student.
+Derived data is data that can be generated from direct data, such as estimated difficulty of exams, pass rates, estimated trajectory of a student (if and when they will finish their degree), or the estimated workload of a student. Methods for obtaining such data are considered out of scope for this paper.
+
+When implementing such a dashboard, one of the key issues is the availability of data. Which kinds of data are available and from what sources is highly dependant on the institution. In the case of the University of Bamberg, there are several sources of data that would need to be combined to create a comprehensive dashboard. The following list is not exhaustive, but gives an overview of the most important sources of data:
+
+\textbf{FlexNow} is where the exam results are stored. This is a highly important source of data, as it contains the grades of all students for all exams. This data can be used to calculate the average grade of a student, the pass rate of a given exam, or the estimated difficulty of an exam.
+
+\textbf{VirtualCampus} is the learning management system of the University of Bamberg. It could be used to gather information about the course material, and the interaction of a student with the course material. This data can be used to estimate the workload of a student and the engagement of a student with the course material.
+
+On \textbf{UniVis}, information about all courses are stored. Together with the degree program specification, this data could be used to suggest courses, however, information about the degree programs is not easily accessible, as will be discussed in section \ref{sec:challenges}.

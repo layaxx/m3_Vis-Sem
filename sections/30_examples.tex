@@ -1,14 +1,145 @@
 \section{Visualization Examples}
 \label{sec:examples}
 
+In this section, some examples of visualization from the literature will be discussed. The visualizations are be grouped by their intended use case for the dashboard.
+
 \subsection{Success Prediction}
 \label{subsec:success_prediction}
+
+The first group of visualizations is concerned with predicting student success.
+
+One quite intuitive design element here is a traffic light scheme, with green indicating a high likelihood of success, yellow indicating a moderate likelihood, and red indicating a low likelihood. This can be seen in the success score gauge plot in Figure \ref{fig:trajectory}.
+
+In this plot, there are multiple zones, indicating different risk levels. This plot focuses on derived data and can be used to highlight the likelihood of failure for a given course or the degree program as a whole. Additionally, a second indicator can be added to this plot, to highlight the effect of an intervention or a change in study behavior.
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/success_1.png}
+    \caption{Success score gauge plot, from \cite{PredictingSuccess}}
+    \label{fig:trajectory}
+\end{figure}
+
+Success prediction can also be helpful when planning which exams to take. In Figure \ref{fig:succes_2.png}, a student can select which exams they intend to take, and the system will predict the likelihood of passing all selected exams.
+This can help students to focus on less exams instead of taking all exams at once.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/success_2.png}
+    \caption{Success prediction for selected exams, from \cite{LISSA}}
+    \label{fig:succes_2.png}
+\end{figure}
 
 \subsection{Trajectory}
 \label{subsec:trajectory}
 
+Another group of visualizations is concerned with the trajectory of a student.
+These can be used to show the path, a student has taken so far and is likely to take in the future. This can be helpful to identify students that are at risk of dropping out or to suggest interventions to students that are likely to take longer than expected to finish their degree.
+
+In Figure \ref{fig:trajectory_1.png}, a selection of typical trajectories is shown.
+These have been identified by the Authors of \cite{DegreePictures-Seed} and experienced educators.
+The trajectories might be used to identify students at risk of dropping out, by comparing their actual grade history to the typical trajectories. There remains the risk however, that the pattern might become apparent only after the optimal intervention time has passed already.
+
+Figure \ref{fig:trajectory_2.png} shows multiple trajectories for the same student.
+The top left plot shows the trajectory over all courses, while the other panels plot achievements for different categories of courses.
+This can be used to get more nuanced insights into the performance of a student, who might be doing well in some categories, but poorly in others.
+The insights could be used to inform decisions about which actions to take: for example, non-mandatory courses could be selected from the areas in which the student performs better, the student could invest more time into the courses in which they perform worse or a possible intervention could target the categories where the student is struggling.
+
+\begin{figure}
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/trajectory_1.png}
+        \caption{Selection of typical trajectories, from \cite{DegreePictures-Seed}}
+        \label{fig:trajectory_1.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/trajectory_2.png}
+        \caption{Trajectory of a student for different course bundles, from \cite{Longitudinal-StudentPerformance}}
+        \label{fig:trajectory_2.png}
+    \end{minipage}
+\end{figure}
+
+In Figure \ref{fig:trajectory-finish_1.png}, estimates for the completion of the study program are shown. Compared to students with a similar profile, this shows the proportion of students that finished their degree program in three, four of five years and the proportion of students that dropped out. This can be useful in the planning phases, as the differences can be compared when selecting different courses for example. Additionally, the influence of passing or failing a given exam can be visualized in such a way.
+
+
+\begin{figure}
+    \begin{minipage}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.3\textwidth]{figures/trajectory-finish_1.png}
+        \hfill
+        \includegraphics[width=0.3\textwidth]{figures/trajectory-finish_2.png}
+        \caption{Estimates for completion of the study program, from \cite{LISSA}}
+        \label{fig:trajectory-finish_1.png}
+    \end{minipage}
+\end{figure}
+
 \subsection{Comparison with cohorts}
 \label{subsec:comparison}
 
+The Comparison with other students is a particularly interesting area. However, was will be discussed in Section \ref{sec:challenges}, there are some things that need to be considered when comparing students with each other.
+
+There are multiple dimensions, in which a comparison to other students could be helpful. The first one is the exam-level comparison, where the performance of a given student is compared to other students that took the same exam. This can also give an indication of the difficulty of the exam. Figure \ref{fig:comparison_exam.png} shows a histogram of grades for a given exam. Additionally, grades that constitute a pass or a fail are highlighted and the grade actually achieved by the student is shown. Figure \ref{fig:comparison_course.png} displays similar data in a different way: the distribution of final grades for a course is displayed as a donut chart.
+
+\begin{figure}
+    \begin{minipage}[b]{0.4\textwidth}
+        \includegraphics[width=0.5\textwidth]{figures/comp_exam.png}
+        \caption{Distribution of grades for multiple exams, from \cite{LISSA}}
+        \label{fig:comparison_exam.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[b]{0.4\textwidth}
+        \includegraphics[width=0.5\textwidth]{figures/comp_course.png}
+        \caption{Distribution of grades for a given course, from \cite{Dashboard-StudentProgress}}
+        \label{fig:comparison_course.png}
+    \end{minipage}
+
+
+\end{figure}
+
+Comparisons with other students can also play a role during the planning phase. Figure \ref{fig:comparison_ects.png} shows the amount of ECTS credits a given student is currently on track to achieve and the average amount of ECTS credits achieved by other students.
+Additionally, thresholds are highlighted, that need to be cleared in order to meet certain requirements. This could also be adapted to the specific requirements of a given degree program.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/comp_ects.png}
+    \caption{Comparison of ECTS credits achieved by a student and other students, from \cite{Dashboard-StudentProgress}}
+    \label{fig:comparison_ects.png}
+\end{figure}
+
+
+
+One thing to keep in mind when comparing students is choosing the correct comparison group.
+For any given course, often there are many students who are enrolled in the online course, but do not actually participate or decide not to take the exam very early on.
+Comparing students who actually want to take the exam with those passive students would bias the results. This could lead to a situation where students feel too safe, because they are doing more than the average student, but most students doing less are not actually planning to take the exam.
+
 \subsection{Planning}
 \label{subsec:planning}
+
+There are multiple phases in a degree program which involve planning. Students might plan their entire degree program upfront, or they might choose which courses to take in the next semester.
+Sometimes, students also might to reconsider if they will be able to pass all exams for the current semester or if they should drop some courses, instead focusing on achieving better grades in fewer courses.
+
+It would be interesting to see, how visualizations could be used to select courses for an upcoming semester, but interesting examples for this are scarce in the literature. Most visualizations do little more than list available courses, with colours to indicate if a course is mandatory or not \cite{Dashboard-StudentProgress}.
+
+Visualizations intended for planning the entire degree program duration might additionally take into account prerequisites for courses. The visualization that comes closest to this is shown in Figure \ref{fig:planning}. Although prerequisites are not explicitly shown, colours indicate which courses are intended for which year of the study program.
+Such visualizations can also take into account the number of ECTS credits that need to be achieved in a given semester, an approximated workload for a given course (which in theory should match the ECTS credits, but in practice there usually are quite large differences between courses with the same credits) and the availability of courses. Then, students can plan there degree program in a way that balances there workload while still achieving the necessary credits in a given time frame.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/planning.png}
+    \caption{Course selection with indicators showing the year that they are appropriate for, from \cite{LISSA-Planning}}
+    \label{fig:planning}
+\end{figure}
+
+
+
+Figure \ref{fig:planning_2} shows, how such a focus on the credits could look like, with the entire amount of credits that need to be gained (180ECTS for a Bachelor's degree) being displayed as a progress bar up top and multiple sliders for the individual semesters below.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/planning_2.png}
+    \caption{Allocation of credits to the semesters, from \cite{LissaLike-StudentSupport}}
+    \label{fig:planning_2}
+\end{figure}
+
