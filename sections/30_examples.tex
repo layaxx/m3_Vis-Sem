@@ -108,11 +108,40 @@ Additionally, thresholds are highlighted, that need to be cleared in order to me
     \label{fig:comparison_ects.png}
 \end{figure}
 
+Of course, some visualizations can belong to multiple groups. For example, Figure \ref{fig:comparison_trend} shows both the trajectory of a student and the performance compared to other students. The trajectory is shown as a line plot, connecting the grades of the students over time. The comparison with peers is achieved through vertical histograms, akin to violin plots. This allows the user to quickly see how they are doing compared to other students.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/comp_trend.png}
+    \caption{Trajectory of a student and comparison with other students, from \cite{LISSA}}
+    \label{fig:comparison_trend}
+\end{figure}
+
+So far, all visualizations were concerned with course-level data such as grades or ECTS. However, visualizations can also be used to compare the engagement of students with the course material. Figure \ref{fig:comp_engagement.png} shows a radar plot with different dimensions of interaction. Other than the line for a given student, other thresholds could be shown here. In this example, the average interaction and the student with the highest interaction scores are highlighted. In theory, this could also take some thresholds into account. Some courses have special restrictions on who is allowed to take the final exam, for instance, it might be required to complete 50\% of assignments given out.
+More generally, such plots can be used to identify students that are not engaging with the course material enough and thus might be at risk of failing the exam. Figure \ref{fig:comp_engagement.png} also includes recommendations for actions a student could take to increase performance, such as submitting homework on time or retaking a test, in which the student scored lower than usual.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/comp_engagement.png}
+    \caption{Radar chart with engagement metrics on the left hand side, and recommended actions to increase performance on the right, from \cite{StudentFacingDashboard}}
+    \label{fig:comp_engagement.png}
+\end{figure}
+
+Actual methods for predicting student success are out of scope for this paper, but \cite{DropoutPrediction-SelfRegulatedLearning} shows different predictive models based on the interaction of students with the course material, and suggests good predictive power after about 25\% of the duration of the course, which should leave time for students to adapt their behaviour.
 
 
 One thing to keep in mind when comparing students is choosing the correct comparison group.
 For any given course, often there are many students who are enrolled in the online course, but do not actually participate or decide not to take the exam very early on.
 Comparing students who actually want to take the exam with those passive students would bias the results. This could lead to a situation where students feel too safe, because they are doing more than the average student, but most students doing less are not actually planning to take the exam.
+Figure \ref{fig:comp_clusters} show an analysis of different clusters of students, based on their interaction with the course material. This shows that there are distinct groups of students, both with regard to their interaction with course material and their performance, and that interaction with the course material can be used as a predictor of performance, however the relationship is not necessarily linear.
+Such classification should thus be performed before comparing students with each other, in order to help students make better decisions.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/comp_clusters.png}
+    \caption{Clusters of students based on their interaction with the course material, from \cite{PredictionMethods-EarlyWarning}}
+    \label{fig:comp_clusters}
+\end{figure}
 
 \subsection{Planning}
 \label{subsec:planning}
